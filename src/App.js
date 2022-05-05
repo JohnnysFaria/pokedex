@@ -1,5 +1,13 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 function App() {
-  return <div className="App">Hello World Again in React!</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
