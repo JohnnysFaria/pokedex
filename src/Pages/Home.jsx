@@ -4,8 +4,6 @@ import api from '../Services/api';
 
 export default function Home() {
   const [pokemons, setPokemons] = useState(null);
-  console.log('pokemons: ', pokemons);
-
   const getPokemons = async () => {
     try {
       const data = await api.getPokemonList(15);

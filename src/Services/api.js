@@ -8,6 +8,11 @@ const api = {
     const json = await response.json();
     return json;
   },
+  getPokemonDetails: async (name) => {
+    const response = await fetch(`${baseUrl}pokemon/${name}`);
+    const json = await response.json();
+    return json;
+  },
 };
 
 export default api;
