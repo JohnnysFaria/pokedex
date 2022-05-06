@@ -1,6 +1,11 @@
 .card {
-  width: 200px;
+  width: 220px;
   height: 200px;
+  border-radius: 10px;
   background-color: tomato;
   margin: 10px;
+}
+
+.card img {
+  width: 100px;
 }

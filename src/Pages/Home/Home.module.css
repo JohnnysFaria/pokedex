@@ -1,0 +1,11 @@
+.root {
+  padding: 5rem;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+}

@@ -14,13 +14,20 @@ export default function Card({ name }) {
     }
   };
 
-  useEffect(() => {
-    getPokemon();
-  }, []);
+  useEffect(() => {}, [getPokemon()]);
 
   return (
-    <div className={styles.card}>
-      {pokemon && pokemon.abilities[0].ability.name}
-    </div>
+    <>
+      {pokemon && (
+        <div className={styles.card}>
+          <p>{pokemon.name}</p>
+          <p>{pokemon.id}</p>
+          <img
+            src={pokemon.sprites.other['official-artwork'].front_default}
+            alt={pokemon.name}
+          />
+        </div>
+      )}
+    </>
   );
 }
