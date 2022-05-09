@@ -9,9 +9,13 @@ const api = {
     return json;
   },
   getPokemonDetails: async (name) => {
-    const response = await fetch(`${baseUrl}pokemon/${name}`);
-    const json = await response.json();
-    return json;
+    try {
+      const response = await fetch(`${baseUrl}pokemon/${name}`);
+      const json = await response.json();
+      return json;
+    } catch (error) {
+      throw new Error(error);
+    }
   },
 };
 

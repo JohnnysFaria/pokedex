@@ -8,7 +8,6 @@ import Search from '../../Components/Search/Search';
 export default function Home() {
   const [pokemons, setPokemons] = useState(null);
   const [text, setText] = useState('');
-  console.log('🚀 ~ Home ~ text', text);
 
   const getPokemons = async () => {
     try {
