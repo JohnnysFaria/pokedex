@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import api from '../../Services/api';
 import Container from '../Container/Container';
+import api from '../../Services/api';
 import styles from './CardDetails.module.css';
 import { getBackground } from '../utils/colors';
 

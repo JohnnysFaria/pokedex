@@ -12,6 +12,18 @@ export const getBackground = (type) => {
     case 'electric':
       return '#EED535';
       break;
+    case 'bug':
+      return '#53D26E';
+      break;
+    case 'fairy':
+      return '#EC2674';
+      break;
+    case 'poison':
+      return '#AE88DD';
+      break;
+    case 'ground':
+      return '#BAA395';
+      break;
     default:
       return '#ffb';
   }
