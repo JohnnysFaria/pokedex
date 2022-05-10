@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../Services/api';
 import styles from './Card.module.css';
+import { getBackground } from '../utils/colors';
 
 export default function Card({ name }) {
   const [pokemon, setPokemon] = useState(null);
@@ -22,7 +23,12 @@ export default function Card({ name }) {
     <>
       {pokemon && (
         <Link to={`/pokemon/details/${pokemon.name}`}>
-          <div className={styles.card}>
+          <div
+            className={styles.card}
+            style={{
+              background: getBackground(pokemon.types[0].type.name),
+            }}
+          >
             <p>{pokemon.name}</p>
             <p>{pokemon.id}</p>
             <img
