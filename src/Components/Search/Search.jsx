@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import './Search.module.css';
+import styles from './Search.module.css';
 
 export default function Search({ value, onChange }) {
   const navigate = useNavigate();
@@ -16,8 +16,14 @@ export default function Search({ value, onChange }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="search" value={value} onChange={handleChange} required />
-      <input type="submit" value="Enviar" />
+      <input
+        className={styles.input}
+        type="search"
+        value={value}
+        onChange={handleChange}
+        required
+      />
+      <input className={styles.btn} type="submit" value="Buscar" />
     </form>
   );
 }

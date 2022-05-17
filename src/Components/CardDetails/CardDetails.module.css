@@ -1,8 +1,9 @@
 .card {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   background: #fff;
-  width: 80%;
+  width: 100%;
   min-height: 100vh;
   border-radius: 10px;
   margin: 0 auto;
@@ -23,3 +24,22 @@
 .info {
   width: 50%;
 }
+
+.teste {
+  display: flex;
+  justify-content: center;
+  width: 210px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #90EE90;
+}
+
+.back {
+  display: flex;
+  width: 300px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #D8D8D8;
+  margin: 10px;
+}
+

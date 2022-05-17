@@ -3,7 +3,6 @@ import Card from '../../Components/Card/Card';
 import api from '../../Services/api';
 import styles from './Home.module.css';
 import Container from '../../Components/Container/Container';
-import Search from '../../Components/Search/Search';
 
 export default function Home() {
   const [pokemons, setPokemons] = useState(null);
@@ -24,8 +23,7 @@ export default function Home() {
 
   return (
     <section className={styles.root}>
-      <Search value={text} onChange={(search) => setText(search)} />
-      <Container title={'pokedex'}>
+      <Container title={'All Pokemon'}>
         <div className={styles.list}>
           {pokemons &&
             pokemons.map((pokemon) => {
