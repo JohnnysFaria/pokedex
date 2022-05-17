@@ -23,7 +23,9 @@ export default function Search({ value, onChange }) {
         onChange={handleChange}
         required
       />
-      <input className={styles.btn} type="submit" value="Buscar" />
+      <button className={styles.btn} type="submit">
+        Search
+      </button>
     </form>
   );
 }

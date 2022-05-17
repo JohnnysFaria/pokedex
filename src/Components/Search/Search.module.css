@@ -9,8 +9,8 @@
 .btn {
   width: 70px;
   height: 30px;
-  background-color: #FFffff;
-  color: burlywood;
+  color: red;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
