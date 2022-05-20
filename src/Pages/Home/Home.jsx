@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className={styles.root}>
+    <section>
       <Container title={'All Pokemon'}>
         <div className={styles.list}>
           {pokemons &&

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CardDetails from '../../Components/CardDetails/CardDetails';
+import Loading from '../../Components/Loading/Loading';
 import api from '../../Services/api';
 import './Details.module.css';
 
@@ -37,5 +38,5 @@ export default function Details() {
     return <div>pokemon não encontro</div>;
   }
 
-  return <div>loading</div>;
+  return <Loading />;
 }

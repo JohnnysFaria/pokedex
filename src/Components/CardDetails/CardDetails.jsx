@@ -3,11 +3,9 @@ import Container from '../Container/Container';
 import api from '../../Services/api';
 import styles from './CardDetails.module.css';
 import { getBackground } from '../utils/colors';
-import { useNavigate } from 'react-router-dom';
 
 export default function CardDetails({ name }) {
   const [pokemon, setPokemon] = useState(null);
-  const navigate = useNavigate();
 
   const getPokemon = async () => {
     try {
