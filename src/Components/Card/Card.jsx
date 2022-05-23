@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../Services/api';
 import styles from './Card.module.css';
-import { getBackground } from '../utils/colors';
+import { getTitle, getBackground } from '../utils/colors';
 
 export default function Card({ name }) {
   const [pokemon, setPokemon] = useState(null);
@@ -29,12 +29,33 @@ export default function Card({ name }) {
               background: getBackground(pokemon.types[0].type.name),
             }}
           >
-            <p>{pokemon.name}</p>
-            <p>{pokemon.id}</p>
-            <img
-              src={pokemon.sprites.other['official-artwork'].front_default}
-              alt={pokemon.name}
-            />
+            <div className={styles.info}>
+              <p>{pokemon.name}</p>
+              <p
+                style={{
+                  background: getTitle(pokemon.types[0].type.name),
+                }}
+              >
+                {pokemon.types[0].type.name}
+              </p>
+
+              {pokemon.types[1] && (
+                <p
+                  style={{
+                    background: getTitle(pokemon.types[0].type.name),
+                  }}
+                >
+                  {pokemon.types[1].type.name}
+                </p>
+              )}
+            </div>
+            <span>{pokemon.id}</span>
+            <div className={styles.image}>
+              <img
+                src={pokemon.sprites.other['official-artwork'].front_default}
+                alt={pokemon.name}
+              />
+            </div>
           </div>
         </Link>
       )}
