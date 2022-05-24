@@ -8,6 +8,11 @@ const api = {
     const json = await response.json();
     return json;
   },
+  getPokemonSpec: async (name) => {
+    const response = await fetch(`${baseUrl}pokemon-species/${name}`);
+    const json = await response.json();
+    return json;
+  },
   getPokemonDetails: async (name) => {
     try {
       const response = await fetch(`${baseUrl}pokemon/${name}`);

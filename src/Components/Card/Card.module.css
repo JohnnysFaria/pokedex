@@ -30,6 +30,7 @@
   padding: 10px;
   border-radius: 10px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .info p:nth-child(1) {
@@ -41,4 +42,5 @@
 .image {
   display: flex;
   justify-content: flex-end;
+  padding-top: 20px;
 }

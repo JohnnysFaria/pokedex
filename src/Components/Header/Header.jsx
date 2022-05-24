@@ -5,9 +5,11 @@ import { useState } from 'react';
 export default function Header() {
   const [text, setText] = useState('');
   return (
-    <div className={styles.header}>
-      <Search value={text} onChange={(search) => setText(search)} />
-      <p>Pokedex</p>
+    <div className={styles.main}>
+      <div className={styles.header}>
+        <Search value={text} onChange={(search) => setText(search)} />
+        <p>Pokedex</p>
+      </div>
     </div>
   );
 }

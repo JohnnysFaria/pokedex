@@ -1,7 +1,7 @@
 export const getBackground = (type) => {
   switch (type) {
     case 'fire':
-      return '#FD7D24';
+      return '#FB926C';
       break;
     case 'grass':
       return '#48D0B0';

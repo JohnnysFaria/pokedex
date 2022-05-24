@@ -16,3 +16,6 @@
   color: #ffffff;
   padding: 0 30px 30px 0;
 }
+.main {
+  filter: drop-shadow(-1px 6px 3px rgba(50,0,0,.4))
+}
