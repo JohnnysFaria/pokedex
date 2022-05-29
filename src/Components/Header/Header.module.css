@@ -11,6 +11,10 @@
   box-shadow: 10px 5px 5px black;
 }
 
+.header input {
+  margin-left: 120px;
+}
+
 .header p {
   font-size: 3rem;
   color: #ffffff;

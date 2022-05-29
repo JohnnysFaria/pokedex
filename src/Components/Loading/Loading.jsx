@@ -5,7 +5,6 @@ export default function Loading() {
   return (
     <Container>
       <div className={styles.loader}>
-        <div></div>
         <div className={styles.ball}></div>
         <div className={styles.ball}></div>
         <div className={styles.ball}></div>

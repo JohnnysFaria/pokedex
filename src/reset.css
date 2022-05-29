@@ -33,14 +33,10 @@ a {
     text-decoration: none;
 }
 
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
 * {
   box-sizing: border-box;
+}
+
+p {
+    text-transform: capitalize;
 }

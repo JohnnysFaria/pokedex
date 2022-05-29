@@ -6,7 +6,6 @@ import Container from '../../Components/Container/Container';
 
 export default function Home() {
   const [pokemons, setPokemons] = useState(null);
-  const [text, setText] = useState('');
 
   const getPokemons = async () => {
     try {
@@ -22,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section>
+    <section className={styles.title}>
       <Container title={'All Pokemon'}>
         <div className={styles.list}>
           {pokemons &&
