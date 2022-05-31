@@ -3,7 +3,7 @@ import Container from '../Container/Container';
 import api from '../../Services/api';
 import styles from './CardDetails.module.css';
 
-import { getTitle } from '../utils/colors';
+import { getTitle, getBackground } from '../utils/colors';
 
 export default function CardDetails({ name }) {
   const [pokemon, setPokemon] = useState(null);
@@ -36,9 +36,14 @@ export default function CardDetails({ name }) {
     <div>
       <Container>
         <div className={styles.container}>
-          <div className={styles.teste}></div>
           {pokemon && (
             <div className={styles.card}>
+              <div
+                className={styles.styleback}
+                style={{
+                  borderRightColor: getBackground(pokemon.types[0].type.name),
+                }}
+              ></div>
               <div className={styles.base}>
                 <div className={styles.baseStatus}>
                   <div className={styles.stats}>
@@ -101,43 +106,39 @@ export default function CardDetails({ name }) {
                   </div>
                 </div>
               </div>
-              <div>
-                <div className={styles.main}>
-                  <div className={styles.main2}>
-                    <div className={styles.info}>
-                      <div className={styles.name}>
-                        <span>{pokemon.id}</span>
-                        <p>{pokemon.name}</p>
-                      </div>
-                      <div>
-                        <p
-                          style={{
-                            background: getTitle(pokemon.types[0].type.name),
-                          }}
-                        >
-                          {' '}
-                          {pokemon.types[0].type.name}
-                        </p>
-                        {pokemon.types[1] && (
-                          <p
-                            style={{
-                              background: getTitle(pokemon.types[0].type.name),
-                            }}
-                          >
-                            {' '}
-                            {pokemon.types[1].type.name}
-                          </p>
-                        )}
-                      </div>
-                      <img
-                        src={
-                          pokemon.sprites.other['official-artwork']
-                            .front_default
-                        }
-                        alt={pokemon.name}
-                      />
-                    </div>
+
+              <div className={styles.main2}>
+                <div className={styles.info}>
+                  <div className={styles.name}>
+                    <p>{pokemon.name}</p>
+                    <span>{pokemon.id}</span>
                   </div>
+                  <div className={styles.types}>
+                    <p
+                      style={{
+                        background: getTitle(pokemon.types[0].type.name),
+                      }}
+                    >
+                      {' '}
+                      {pokemon.types[0].type.name}
+                    </p>
+                    {pokemon.types[1] && (
+                      <p
+                        style={{
+                          background: getTitle(pokemon.types[0].type.name),
+                        }}
+                      >
+                        {' '}
+                        {pokemon.types[1].type.name}
+                      </p>
+                    )}
+                  </div>
+                  <img
+                    src={
+                      pokemon.sprites.other['official-artwork'].front_default
+                    }
+                    alt={pokemon.name}
+                  />
                 </div>
               </div>
             </div>
