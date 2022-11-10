@@ -15,7 +15,6 @@ export default function Home() {
       console.log(erro);
     }
   };
-
   useEffect(() => {
     getPokemons();
   }, []);

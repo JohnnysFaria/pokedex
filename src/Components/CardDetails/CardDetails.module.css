@@ -51,9 +51,6 @@
   padding-top: 20px;
 }
 
-/* .main {
-  filter: drop-shadow(-1px 1px 10px rgb(5, 5, 5));
-} */
 
 .base {
   width: 350px;
@@ -75,6 +72,7 @@
   transform: rotateY(180deg);
   cursor: pointer;
 }
+
 
 .stats,.about{
   position: absolute;

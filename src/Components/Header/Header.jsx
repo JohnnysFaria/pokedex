@@ -8,10 +8,12 @@ export default function Header() {
   return (
     <div className={styles.main}>
       <div className={styles.header}>
-        <Search value={text} onChange={(search) => setText(search)} />
-        <Link to="/">
-          <p>Pokedex</p>
-        </Link>
+        <div className={styles.algo}>
+          <Search value={text} onChange={(search) => setText(search)} />
+          <Link to="/">
+            <p>Pokedex</p>
+          </Link>
+        </div>
       </div>
     </div>
   );

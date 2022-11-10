@@ -15,7 +15,7 @@ export default function Search({ value, onChange }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.teste} onSubmit={handleSubmit}>
       <input
         className={styles.input}
         type="search"

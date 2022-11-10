@@ -49,7 +49,7 @@ export default function Card({ name }) {
                 </p>
               )}
             </div>
-            <span>{pokemon.id}</span>
+            <span className={styles.id}>{pokemon.id}</span>
             <div className={styles.image}>
               <img
                 src={pokemon.sprites.other['official-artwork'].front_default}

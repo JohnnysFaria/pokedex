@@ -1,5 +1,10 @@
+.teste {
+  display: flex;
+  width: 30%;
+}
+
 .input {
-  width: 400px;
+  width: 80%;
   padding: 8px 10px;
   background-color: #FF6C6C;
   border: none;

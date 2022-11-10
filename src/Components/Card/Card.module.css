@@ -1,6 +1,6 @@
 .card {
-  width: 220px;
-  height: 200px;
+  width: 250px;
+  height: 230px;
   border-radius: 10px;
   margin: 10px;
   transition: .3s;
@@ -17,9 +17,65 @@
 }
 
 .card:hover {
+  animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  /* animation: vibrate-1 0.2s linear 3 both; */
   transform: scale(1.1);
+  border-radius: 5%;
 }
 
+.id {
+  color: white;
+}
+
+
+/* @keyframes scale-in-ver-center {
+
+  100% {
+    background-color: white;
+    background-image: url('../../Images/pokeball.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+            transform: translate(0);
+            background-color: white;
+            background-image: url('../../Images/pokeball.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+  }
+  20% {
+            transform: translate(-2px, 2px);
+            background-color: white;
+
+  }
+  40% {
+            transform: translate(-2px, -2px);
+            background-color: white;
+  }
+  60% {
+            transform: translate(2px, 2px);
+            background-color: white;
+
+  }
+  80% {
+            transform: translate(2px, -2px);
+            background-color: white;
+
+  }
+  100% {
+            transform: translate(0);
+            background-color: white;
+            background-image: url('../../Images/pokeball.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: scaleY(1);
+            opacity: 1;
+  }
+} */
 
 .info {
   display: flex;
